@@ -34,10 +34,10 @@ print_msg "Installing Python Dependencies..."
 
 pip3 install --upgrade pip --user
 
-DEPENDENCIES=("numpy", "pygame", "cbor2", "pyzmq", "coppeliasim-zmqremoteapi-client")
+DEPENDENCIES=(numpy pygame cbor2 pyzmq coppeliasim-zmqremoteapi-client)
 for dep in "${DEPENDENCIES[@]}"; do
     print_msg "Installing $dep..."
-    pip3 install $dep --user
+    python3 -m pip install --user "$dep"
 done
 
 print_msg "=========================================="
