@@ -64,6 +64,7 @@ else
         # Renaissance the extracted folder to a simpler name
         EXTRACTED_DIR=$(tar -tf "$COPPELIA_FILE" | head -1 | cut -f1 -d"/")
         mv "$EXTRACTED_DIR" "CoppeliaSim"
+        mv "CoppeliaSim" "../../"
         
         rm "$COPPELIA_FILE"
         print_msg "CoppeliaSim installed in /CoppeliaSim"
@@ -76,7 +77,7 @@ fi
 print_msg "=========================================="
 print_msg "           Final Task Setup Complete!     "
 print_msg "=========================================="
-echo "3. To Run CoppeliaSim:"
+echo "To Run CoppeliaSim:"
 echo "   cd /CoppeliaSim"
 echo "   ./coppeliaSim.sh"
 print_msg "=========================================="
